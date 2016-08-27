@@ -1,0 +1,7 @@
+.idea
+public/css/*.min*
+public/fonts
+*.log
+*.map
+public/js/bundle.js
+node_modules

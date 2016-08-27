@@ -1,0 +1,14 @@
+.container {
+    padding-top: 50px;
+    width: 90%;
+}
+
+.action-completed {
+    background-color: #99e671;
+}
+
+hr {
+    background-color: rgba(0,0,0,0.6);
+    height: 10px;
+    border: none;
+}
