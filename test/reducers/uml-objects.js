@@ -13,4 +13,21 @@ describe('UMLObjectReducer', () => {
         var state = Object.freeze(initState);
         expect(UMLObjectsReducer(state, {type: 'FAKE_ACTION'})).to.deep.equal(initState);
     });
+
+    it('when `STATUS_CHANGE` is called with a completed UML Object, the correct object is updated', () => {
+        var state = Object.freeze(initState);
+        var action = {
+            type: 'STATUS_CHANGE',
+            payload: {
+                id: 6,
+                newStatus: 'completed'
+            }
+        };
+
+        var newState = UMLObjectsReducer(state, action);
+
+        expect(newState.some(item => {
+            return item.id === 6 && item.status === 'completed';
+        })).to.equal(true);
+    });
 });
