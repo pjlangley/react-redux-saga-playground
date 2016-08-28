@@ -26,8 +26,8 @@ describe('UMLObjectReducer', () => {
 
         var newState = UMLObjectsReducer(state, action);
 
-        expect(newState.some(item => {
-            return item.id === 6 && item.status === 'completed';
-        })).to.equal(true);
+        expect(
+            newState.some(item => item.id === 6 && item.status === 'completed')
+        ).to.equal(true);
     });
 });
